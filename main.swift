@@ -13,5 +13,11 @@ func printDiamond(size: Int) {
         //Create variables for the second for loop for bottom half
         space = 1
         stars = size - 2
+        //Create a for loop for the bottom half of the diamond
+        for _ in 0..<(size / 2) {
+            print(string(repeating: " ", count: space) + string(repeating: "*", count: stars))
+            space += 1
+            stars -= 2
+        }
         }
     }
