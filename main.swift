@@ -26,6 +26,12 @@ func printDiamond(size: Int) {
           print(String(repeating: " ", count: size - 1) + "* ", terminator: "")
           var space = size
           var stars = 1
+          //  Create a for loop for the upper half of the diamond
+          for _ in 0..<(size / 2) {
+              print(String(repeating: " ", count: space * 2) + String(repeating: "* ", count: stars - 1))
+              space -= 1
+              stars += 2
+          }
         }
     }
     //  Ask the user for their input and print the diamond
