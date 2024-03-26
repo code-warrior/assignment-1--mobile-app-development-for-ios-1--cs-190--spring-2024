@@ -21,7 +21,10 @@ func printDiamond(size: Int) {
         }
         //  Create an even diamond
         } else {
-          print()
+          print("Diamond with size \(size):")
+          var space = size / 2
+          var stars = 1
+
         }
     }
     //  Ask the user for their input and print the diamond
