@@ -2,8 +2,8 @@
 func printDiamond(size: Int) {
     if size % 2 != 0 {
         print("Diamond with a size of \(size):")
-        var space = size / 2 //  amount of spaces needed before going to the next line
-        var stars = 1 //  amount of asterisks on the first line
+        var space = size / 2 //  Amount of spaces needed before going to the next line
+        var stars = 1 //  Amount of asterisks on the first line
         //  Create a for loop for the upper half of the diamond
         for _ in 0..<(size / 2 + 1) {
             print(String(repeating: " ", count: space) + String(repeating: "*", count: stars))
@@ -22,7 +22,7 @@ func printDiamond(size: Int) {
         //  Create an even diamond
         } else {
           print("Diamond with a size of \(size):")
-          //  print a singular asterisk before the for loop
+          //  Print a singular asterisk before the for loop
           print(String(repeating: " ", count: size - 1) + "* ", terminator: "")
           var space = size
           var stars = 1
