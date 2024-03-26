@@ -21,9 +21,10 @@ func printDiamond(size: Int) {
         space += 1
         stars -= 2
     }
+  }
 
-    //  Create an even diamond
-  } else {
+  //  Create an even diamond
+  else {
       print("Diamond with a size of \(size):")
       //  Print a singular asterisk before the for loop
       print(String(repeating: " ", count: size - 1) + "* ", terminator: "")
