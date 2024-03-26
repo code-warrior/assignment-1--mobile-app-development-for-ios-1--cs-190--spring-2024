@@ -6,7 +6,7 @@ func printDiamond(size: Int) {
         var stars = 1 //amount of asterisks on the first line
         //Create a for loop for the upper half of the diamond
         for _ in 0..<(size / 2 + 1) {
-            print(string(repeating: " ", count: space) + string(repeating: "*", count: stars))
+            print(String(repeating: " ", count: space) + String(repeating: "*", count: stars))
             space -= 1
             stars += 2
         }
@@ -15,9 +15,16 @@ func printDiamond(size: Int) {
         stars = size - 2
         //Create a for loop for the bottom half of the diamond
         for _ in 0..<(size / 2) {
-            print(string(repeating: " ", count: space) + string(repeating: "*", count: stars))
+            print(String(repeating: " ", count: space) + String(repeating: "*", count: stars))
             space += 1
             stars -= 2
         }
         }
     }
+    //Ask the user for their input and print the diamond
+print("Enter the size of your diamond:")
+if let size = Int(readLine() ?? "") {
+    printDiamond(size: size)
+} else {
+    print("Please enter a number")
+}
