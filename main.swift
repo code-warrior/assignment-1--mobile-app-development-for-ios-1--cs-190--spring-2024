@@ -24,7 +24,7 @@ func printDiamond(size: Int) {
           print("Diamond with a size of \(size):")
           //  Print a singular asterisk before the for loop
           print(String(repeating: " ", count: size - 1) + "* ", terminator: "")
-          var space = size
+          var space = size / 2
           var stars = 1
           //  Create a for loop for the upper half of the diamond
           for _ in 0..<(size / 2) {
@@ -34,10 +34,12 @@ func printDiamond(size: Int) {
           }
           //  Create a for loop for the bottom half of the diamond
           for _ in 0..<(size / 2) {
-              print(String(repeating: " ", count: space * 2) + String(repeating: "* ", count: stars - 1)
+              print(String(repeating: " ", count: space * 2) + String(repeating: "* ", count: stars - 1))
               space += 1
               stars -= 2
           }
+          //  Print the singular asterisk at the bottom
+          print(String(repeating: " ", count: size - 1) + "* ")
         }
     }
     //  Ask the user for their input and print the diamond
